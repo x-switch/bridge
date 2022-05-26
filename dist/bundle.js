@@ -1,0 +1,1 @@
+(()=>{"use strict";var a={init:!1,events:new Set,callbacks:{},allCallbacks:[]};a.init||(a.init=!0,window.addEventListener("message",(function(e){var t=e.data,n=t.eventType,c=t.eventName,i=t.eventData;"emit"===n&&(function(e,t){a.allCallbacks.forEach((function(a){return a(e,t)}))}(c,i),a.events.has(c)&&a.callbacks[c].forEach((function(a){return a.callback(i,a.context)})))})))})();
